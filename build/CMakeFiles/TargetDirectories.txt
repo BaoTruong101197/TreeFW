@@ -1,0 +1,3 @@
+/home/pyramid/C-projects/TreeFW/build/CMakeFiles/rebuild_cache.dir
+/home/pyramid/C-projects/TreeFW/build/CMakeFiles/edit_cache.dir
+/home/pyramid/C-projects/TreeFW/build/CMakeFiles/tree.dir

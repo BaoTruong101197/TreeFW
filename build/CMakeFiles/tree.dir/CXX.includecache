@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/application.hpp
+
+/home/pyramid/C-projects/TreeFW/src/application.cpp
+application.hpp
+/home/pyramid/C-projects/TreeFW/src/application.hpp
+bits/stdc++.h
+-
+
+/home/pyramid/C-projects/TreeFW/src/main.cpp
+bits/stdc++.h
+-
+application.hpp
+/home/pyramid/C-projects/TreeFW/src/application.hpp
+
