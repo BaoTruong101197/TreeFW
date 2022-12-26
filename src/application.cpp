@@ -12,4 +12,5 @@ Application::~Application()
 
 int Application::main()
 {
+    return 0;
 }

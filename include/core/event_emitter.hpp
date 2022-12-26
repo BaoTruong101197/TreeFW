@@ -13,7 +13,7 @@ class EventEmitter
 {
 private: 
     Event<> event;
-    std::map<Events, Event<...Fn>> event_map;
+    std::map<Events, Event<>> event_map;
 public:
     using Callback = std::function<void(Fn...)>;
     Callback callback;
