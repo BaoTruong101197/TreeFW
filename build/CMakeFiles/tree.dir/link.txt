@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/tree.dir/src/application.o CMakeFiles/tree.dir/src/main.o  -o tree 
