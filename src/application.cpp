@@ -10,8 +10,6 @@ Application::~Application()
     
 }
 
-int Application::main(const int argc, char* argv[])
+int Application::main()
 {
-    std::cout << "main" << std::endl;
-    return 0;
 }

@@ -2,7 +2,7 @@ project(tree)
 
 include_directories(include)
 
-set(SOURCES src/main.cpp src/application.cpp)
+#set(SOURCES src/main.cpp src/application.cpp)
 
 file(GLOB SOURCES "src/*.cpp")
 

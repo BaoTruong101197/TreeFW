@@ -7,16 +7,32 @@
 #IncludeRegexTransform: 
 
 ../include/application.hpp
+functional
+-
+core/event.hpp
+../include/core/event.hpp
+core/event_emitter.hpp
+../include/core/event_emitter.hpp
+core/enums.hpp
+../include/core/enums.hpp
+
+../include/core/enums.hpp
+
+../include/core/event.hpp
+
+../include/core/event_emitter.hpp
+core/enums.hpp
+../include/core/core/enums.hpp
+core/event.hpp
+../include/core/core/event.hpp
+map
+-
+bits/stdc++.h
+-
 
 /home/pyramid/C-projects/TreeFW/src/application.cpp
 application.hpp
 /home/pyramid/C-projects/TreeFW/src/application.hpp
 bits/stdc++.h
 -
-
-/home/pyramid/C-projects/TreeFW/src/main.cpp
-bits/stdc++.h
--
-application.hpp
-/home/pyramid/C-projects/TreeFW/src/application.hpp
 

@@ -10,8 +10,11 @@ class Event
 public:
     using Callback = std::function<void(Fn...)>;
     Callback callback;
+    Event() {
 
-    Event(Callback& _callback) {
+    }
+
+    void on(Callback _callback) {
         callback = std::move(_callback);
     }
 

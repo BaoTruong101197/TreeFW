@@ -220,12 +220,6 @@ EXECUTABLE_OUTPUT_PATH:PATH=
 LIBRARY_OUTPUT_PATH:PATH=
 
 //Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/pyramid/C-projects/TreeFW/build
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/pyramid/C-projects/TreeFW
-
-//Value Computed by CMake
 tree_BINARY_DIR:STATIC=/home/pyramid/C-projects/TreeFW/build
 
 //Value Computed by CMake
