@@ -1,5 +1,5 @@
 /**
- * @author Matthew Nichols
+ * @author BaoTruong
  */
 
 #pragma once

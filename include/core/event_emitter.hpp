@@ -1,31 +1,30 @@
 /**
- * @author Bao
+ * @author BaoTruong
  */
 
 #pragma once
 #include "core/enums.hpp"
 #include "core/event.hpp"
-#include <map>
-#include<bits/stdc++.h>
+#include "std/unordered_map.hpp"
+#include <bits/stdc++.h>
 
-template <typename Key = Events, typename ...Fn>
-class EventEmitter 
+template <typename Key = Events, typename... Ts>
+class EventEmitter
 {
-private: 
-    Event<> event;
-    std::map<Events, Event<>> event_map;
 public:
-    using Callback = std::function<void(Fn...)>;
-    Callback callback;
-
-    void on(Events key, Callback _callback) {
-        event.on(_callback);
-        event_map.insert(std::pair<Events, Event<>>(key, event));
+    using EventType = Event<Ts...>;
+    using EventMap = UMap<Key, EventType>;
+    template <Key>
+    EventType *getEventType(Key &&key)
+    {
+        auto it = event_map.find(std::forward<Key>(key));
+        return it != event_map.end() ? &it->second : nullptr;
     }
-
-    void emit(Events key) {
-        if (event_map.find(key) != event_map.end()) {
-            event_map[key].emit();
-        }  
-    }   
+    template <typename K, typename CB>
+    void on(K &&key, CB &&_callback)
+    {
+        getEventType(std::forward<K>(key))->connectCB(std::forward<CB>(_callback));
+    } // void emit(Events key) {
+    // } private:
+    EventMap event_map;
 };

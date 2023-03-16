@@ -1,5 +1,5 @@
 /**
- * @author Bao Truong
+ * @author BaoTruong
  */
 
 #include<bits/stdc++.h>
