@@ -46,9 +46,8 @@ public:
 
     void emitEventList(const EventList &_eventList, Ts... params)
     {
-        for (std::size_t i = 0; i < _eventList.size(); i++)
-        {
-            _eventList(params...);
+        for (auto& event : _eventList) {
+            event.first(params...);
         }
     }
 
@@ -56,7 +55,7 @@ public:
     {
         if (!empty())
         {
-            emitEventList(params...);
+            emitEventList(callbacks, params...);
         }
     }
 

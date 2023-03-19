@@ -11,8 +11,6 @@
 class Application 
 {
 private:
-    Event<> event;
-    EventEmitter<> event_emitter;
 public:
     Application();
     ~Application();
