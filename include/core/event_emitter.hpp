@@ -6,7 +6,6 @@
 #include "core/enums.hpp"
 #include "core/event.hpp"
 #include "std/unordered_map.hpp"
-#include <bits/stdc++.h>
 
 template <typename Key = Events, typename... Ts>
 class EventEmitter

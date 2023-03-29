@@ -1,12 +1,23 @@
-#include <vector>
+/**
+ *
+ * @author Bao Truong
+ */
 
 namespace logger {
-template<typename T>
-void log(const char* const file, const char* const function, const int line, const T& log)
-{
-    std::cout << file << " | " << function << " | " << line << " | " << log << "\n";  
-}
+    #include <stdio.h>
+    #include <stdarg.h>
+
+    void log(const char* format, ...)
+    {
+        
+        va_list args;
+        va_start(args, format);
+            vprintf(format, args);
+        va_end(args); 
+        printf("\n");
+    }
 }
 
-#define LOG_LINE(FILE, FUNC, LINE, LOG) logger::log(FILE, FUNC, LINE,  LOG)
-#define LOG(LOG) LOG_LINE(__FILE__, __FUNCTION__, __LINE__,  LOG)
+#define LOG(F, ...) logger::log(F, __VA_ARGS__)
+#define LOG_ERR(F, ...) logger::log("\033[1;31m[ERR]\033[0m: " F, __VA_ARGS__)
+#define LOG_INFO(F, ...) logger::log("\033[1;33m[INFO]\033[0m: " F, __VA_ARGS__)

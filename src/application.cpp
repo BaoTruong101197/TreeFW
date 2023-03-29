@@ -1,7 +1,14 @@
+/**
+ *
+ * @author Bao Truong
+ */
+
+
 #include "application.hpp"
-#include <bits/stdc++.h>
 #include "core/enums.hpp"
-#include "logger/logger.hpp"
+// #include "logger/logger.hpp"
+#include "core/tree.hpp"
+#include <iostream>
 
 Application::Application()
 {
@@ -11,16 +18,29 @@ Application::~Application()
 {
 }
 
-EventEmitter<Events, int> event_emitter;
-
 int Application::main()
 {
-    LOG(2);
+    Tree ptr;
+    Tree ptr1(&ptr);
+    Tree ptr2(&ptr);
+    Tree ptr3(&ptr1);
+    Tree ptr4(&ptr2);
+    Tree ptr5(&ptr2);
 
-    event_emitter.on(Events::Change, [&](int a) {
-        std::cout << "Bao dep trai 2" << a;
+    if (ptr.getChild("1"))
+    {
+        std::cout << ptr.getChild("1")->getName();
+    }
+    else 
+    {
+        std::cout << "AAAAA";
+    }
+    
+    // ptr.forEachChild();
+    ptr.forEachChild([&](auto* child) {
+        std::cout << child->getName();
     });
-
-    event_emitter.emit(Events::Change, 5);
+    
+    
     return 0;
 }
