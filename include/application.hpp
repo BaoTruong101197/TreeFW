@@ -8,6 +8,8 @@
 #include "core/event_emitter.hpp"
 #include "core/enums.hpp"
 
+class FieldNode;
+
 class Application 
 {
 private:

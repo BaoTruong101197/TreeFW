@@ -7,6 +7,7 @@
 #include <vector>
 #include <atomic>
 #include <functional>
+
 // Event handler
 template <typename... Ts>
 class Event

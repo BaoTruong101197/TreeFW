@@ -13,7 +13,6 @@ class EventEmitter
 public:
     using EventType = Event<Ts...>;
     using EventMap  = UMap<Key, EventType>;
-    Event<> e;
 
     template <typename K>
     EventType *getEventType(K &&key)

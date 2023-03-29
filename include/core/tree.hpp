@@ -5,7 +5,6 @@
 #include "core/event_emitter.hpp"
 #include "core/enums.hpp"
 #include "std/unordered_map.hpp"
-#include <iostream>
 #include <functional>
 
 #pragma one

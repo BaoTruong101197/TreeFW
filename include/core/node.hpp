@@ -12,11 +12,13 @@
 class Node : public Tree
 {
 public:
-    explicit Node(const FieldNode& _fieldNode = {});
+    explicit Node(FieldNode& _fieldNode);
     virtual ~Node();
 
     // get the name of each node
     virtual std::string getName() const;
+
+    void appendToDefaultNode(FieldNode& _fieldNode);
 
 private:
     FieldNode m_defaultFieldNode;
