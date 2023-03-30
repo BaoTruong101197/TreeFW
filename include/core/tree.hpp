@@ -9,7 +9,7 @@
 
 #pragma one
 
-class Tree 
+class Tree : EventEmitter<>
 {
 public:
     Tree(Tree* ptr = nullptr);

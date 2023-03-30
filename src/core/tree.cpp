@@ -5,7 +5,7 @@
 
 #include "core/tree.hpp"
 
-Tree::Tree(Tree* p)
+Tree::Tree(Tree* p) : EventEmitter()
 {
     setParent(p);
 }

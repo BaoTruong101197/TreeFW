@@ -17,7 +17,7 @@ public:
 
     ~FieldNode();
 
-    Tree* getParent();
+    Tree* getParent() const;
 private:
     Tree* m_parentPtr {nullptr};
     StringUMap<Tree*> m_fieldList;

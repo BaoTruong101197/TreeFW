@@ -14,7 +14,7 @@ FieldNode::~FieldNode()
 {
 }
 
-Tree* FieldNode::getParent()
+Tree* FieldNode::getParent() const
 {
     return m_parentPtr;
 }
